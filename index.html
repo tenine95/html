@@ -4,36 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>김민성 포트폴리오</title>
+    <title>Portfolio</title>
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <!-- facncybox CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <!-- Full Page's CSS -->
+    <link rel="stylesheet" href="lib/fullpage.css" />
 
-    <link href="css/font.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" />
+    <!-- style css -->
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- Jquery JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <!-- facnybox JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Full Page's JS -->
+    <script src="lib/fullpage.min.js"></script>
+
     <script>
         $(function(){
             var swiper = new Swiper(".mySwiper", {
-                pagination: {
-                el: ".swiper-pagination",
-                type: "fraction",
-                },
+                slidesPerView: 1,
+                spaceBetween: 200,
+                loop: true,
+
                 navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
                 },
             });
-
-            $('.motion_menu ul li').click(function(){
-                $('.motion_menu ul li').removeClass('on');
+            $('.tab_menu ul li').click(function(){
+                $('.tab_menu ul li').removeClass('on');
                 $(this).addClass('on');
 
                 $('.mySwiper').removeClass('on');
@@ -43,384 +44,554 @@
     </script>
 </head>
 <body>
-    <header>
-        <div class="inner">
-            <h1>
-                <a href="#">kimminseong</a>
-            </h1>
-            <nav>
-                <ul>
-                    <li><a href="#">영상편집</a></li>
-                    <li><a href="#">웹디자인/웹퍼블리싱</a></li>
-                    <li><a href="#">2D디자인</a></li>
-                    <li><a href="#">나의소개</a></li>
-                </ul>
-            </nav>
-        </div><!-- .inner end -->
-    </header>
+    <!-- fullpage.js -->
+    <div id="fullpage">
+        <header>
+            <div class="inner">
+                <h1>
+                    <a href="#">Kim Minseong</a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Video Editing</a></li>
+                        <li><a href="#">Web Design & Publishing</a></li>
+                        <li><a href="#">2D Design</a></li>
+                        <li><a href="#">About Me</a></li>
+                    </ul>
+                </nav>
+            </div><!-- .inner end -->
+        </header>
 
 
-    <section class="main_visual">
-        <img src="img/cont03_1.jpg" alt="" />
-        <div class="inner">
-            <p>motion graphic designer</p>
-            <h2>Kim Minseong Designer</h2>
-        </div><!-- .inner end -->
-    </section><!-- .main_visual end -->
-
-
-    <section class="cont01">
-        <div class="inner">
-            <div class="title">
-                <h3>영상편집</h3>
-                <p>프리미어프로, 애프터이펙트 등을 사용하여 모션그래픽을 제작하였습니다.</p>
-            </div><!-- .title end -->
-            <div class="motion_menu">
-                <ul>
-                    <li class="on">게임</li>
-                    <li>홍보영상</li>
-                    <li>인포그래픽</li>
-                    <li>브이로그</li>
-                    <li>뮤비티저</li>
-                </ul>
-            </div><!-- .motion_menu end -->
-            <!-- swiper slide -->
-            <!-- motion_menu 1 -->
-            <div class="swiper mySwiper on">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="item">
-                            <!-- youtube video-->
-                            <div class="pc_youtube">
-                                <img src="img/pc_img.png" alt="" />
-                                <div class="youtube">
-                                    <div>
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
-                                </div><!-- .youtube end -->
-                            </div><!-- .pc_youtube end -->
-                            <div class="info">
-                                <strong>촬영, 출연, 편집, 디자인, 특수효과</strong>
-                                <h4>영상 제목 작성하는 곳</h4>
-                                <p>컨셉 및 제작 목적 자신과 커다란 싶이 인류의 무엇을 인간의 듣기만 그리하였는가? 그들의 보는 새가 때에, 듣기만 하는 것이다. 이상을 피가 얼마나 작고 위하여서 보배를 부패뿐이다. 힘차게 속에 피어나는 곳이 현저하게 이것은 풀이 힘차게 칼이다. 끓는 피어나기 피고, 전인 몸이 봄바람을 현저하게 아니다.</p>
-                                <ul class="text">
-                                    <li><strong>프로그램</strong> : 프리미어프로, 애프터이펙트, 마야, 포토샵, 일러스트레이터</li>
-                                    <li><strong>제작일자</strong> : 2022.09</li>
-                                </ul><!-- .text end -->
-                                <ul class="btn">
-                                    <li><a href="#">영상원본보기</a></li>
-                                    <li><a href="#">기획서보기</a></li>
-                                </ul><!-- .btn end -->
-                            </div><!-- .info end -->
-                        </div><!-- .item end -->
-                    </div><!-- 1 -->
-                    <div class="swiper-slide">
-                        <div class="item">
-                            <!-- youtube video-->
-                            <div class="pc_youtube">
-                                <img src="img/pc_img.png" alt="" />
-                                <div class="youtube">
-                                    <div>
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
-                                </div><!-- .youtube end -->
-                            </div><!-- .pc_youtube end -->
-                            <div class="info">
-                                <strong>촬영, 출연, 편집, 디자인, 특수효과</strong>
-                                <h4>영상 제목 작성하는 곳</h4>
-                                <p>컨셉 및 제작 목적 자신과 커다란 싶이 인류의 무엇을 인간의 듣기만 그리하였는가? 그들의 보는 새가 때에, 듣기만 하는 것이다. 이상을 피가 얼마나 작고 위하여서 보배를 부패뿐이다. 힘차게 속에 피어나는 곳이 현저하게 이것은 풀이 힘차게 칼이다. 끓는 피어나기 피고, 전인 몸이 봄바람을 현저하게 아니다.</p>
-                                <ul class="text">
-                                    <li><strong>프로그램</strong> : 프리미어프로, 애프터이펙트, 마야, 포토샵, 일러스트레이터</li>
-                                    <li><strong>제작일자</strong> : 2022.09</li>
-                                </ul><!-- .text end -->
-                                <ul class="btn">
-                                    <li><a href="#">영상원본보기</a></li>
-                                    <li><a href="#">기획서보기</a></li>
-                                </ul><!-- .btn end -->
-                            </div><!-- .info end -->
-                        </div><!-- .item end -->
-                    </div><!-- 2 -->
+        <div class="section " id="section0">
+            <section class="main_visual">
+                <div class="img">
+                    <img src="" alt="">
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div><!-- .swiper end 1 -->
-            <!-- motion_menu 2 -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="item">
-                            <!-- youtube video-->
-                            <div class="pc_youtube">
-                                <img src="img/pc_img.png" alt="" />
-                                <div class="youtube">
-                                    <div>
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="inner">
+                    <p>img</p>
+                </div><!-- .inner end -->
+            </section><!-- .main_visual end -->
+        </div><!-- #section0 end -->
+
+
+        <div class="section " id="section1">
+            <section class="cont01">
+                <div class="inner">
+                    <div class="title">
+                        <div class="title_flex">
+                            <h3>Video Editing</h3>
+                            <p>｜Premiere Pro & After effect</p>
+                        </div><!-- .title_flex end -->
+                        <div class="tab_menu">
+                            <ul>
+                                <li class="on">Video 1</li>
+                                <li>Video 2</li>
+                                <li>Video 3</li>
+                                <li>Video 4</li>
+                                <li>Video 5</li>
+                            </ul>
+                        </div><!-- .tab_menu end -->
+                    </div><!-- .title end -->
+
+                    <!-- Swiper -->                  
+                    <div class="swiper mySwiper on">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="info">
+                                        <div class="flex_wrap">
+                                            <div class="info_1">
+                                                <p>프로젝트 제목</p>
+                                                <ul class="btn">
+                                                    <li><a href="#">영상 원본 보기</a></li>
+                                                    <li><a href="#">기획서 보기</a></li>
+                                                </ul><!-- .btn end -->
+                                            </div><!-- .info_1 end -->
+                                            <div class="bar"></div>
+                                            <div>
+                                                <strong>작업 기간</strong>
+                                                <p>2022.00 ~ 2022.00</p>
+                                            </div>
+                                            <div>
+                                                <strong>참여 인원</strong>
+                                                <p>개인 프로젝트</p>
+                                            </div>
+                                            <div>
+                                                <strong>소개</strong>
+                                                <p>사랑의 어디 같이 끝에 역사를 지혜는<br>그들은 있으랴?봄날의 실현에 같이,<br> 소금이라 것은 방황하여도,</p>
+                                            </div>
+                                        </div><!-- .flex_wrap end -->
+                                    </div><!-- .info end -->
+                                    <div class="pc_youtube">
+                                        <img src="img/pc_img.png" alt="" />
+                                        <div class="youtube">
+                                            <div>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        </div><!-- .youtube end -->
+                                    </div><!-- .pc_youtube end -->
+                                    <div class="page">
+                                        <p>1 / 2</p>
                                     </div>
-                                </div><!-- .youtube end -->
-                            </div><!-- .pc_youtube end -->
-                            <div class="info">
-                                <strong>촬영, 출연, 편집, 디자인, 특수효과</strong>
-                                <h4>영상 제목 작성하는 곳</h4>
-                                <p>컨셉 및 제작 목적 자신과 커다란 싶이 인류의 무엇을 인간의 듣기만 그리하였는가? 그들의 보는 새가 때에, 듣기만 하는 것이다. 이상을 피가 얼마나 작고 위하여서 보배를 부패뿐이다. 힘차게 속에 피어나는 곳이 현저하게 이것은 풀이 힘차게 칼이다. 끓는 피어나기 피고, 전인 몸이 봄바람을 현저하게 아니다.</p>
-                                <ul class="text">
-                                    <li><strong>프로그램</strong> : 프리미어프로, 애프터이펙트, 마야, 포토샵, 일러스트레이터</li>
-                                    <li><strong>제작일자</strong> : 2022.09</li>
-                                </ul><!-- .text end -->
-                                <ul class="btn">
-                                    <li><a href="#">영상원본보기</a></li>
-                                    <li><a href="#">기획서보기</a></li>
-                                </ul><!-- .btn end -->
-                            </div><!-- .info end -->
-                        </div><!-- .item end -->
-                    </div><!-- 1 -->
-                    <div class="swiper-slide">
-                        <div class="item">
-                            <!-- youtube video-->
-                            <div class="pc_youtube">
-                                <img src="img/pc_img.png" alt="" />
-                                <div class="youtube">
-                                    <div>
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div><!-- .item end -->
+                            </div><!-- .swiper-slide 1 end -->
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="info">
+                                        <div class="flex_wrap">
+                                            <div class="info_1">
+                                                <p>프로젝트 제목</p>
+                                                <ul class="btn">
+                                                    <li><a href="#">영상 원본 보기</a></li>
+                                                    <li><a href="#">기획서 보기</a></li>
+                                                </ul><!-- .btn end -->
+                                            </div><!-- .info_1 end -->
+                                            <div class="bar"></div>
+                                            <div>
+                                                <strong>작업 기간</strong>
+                                                <p>2022.00 ~ 2022.00</p>
+                                            </div>
+                                            <div>
+                                                <strong>참여 인원</strong>
+                                                <p>개인 프로젝트</p>
+                                            </div>
+                                            <div>
+                                                <strong>소개</strong>
+                                                <p>사랑의 어디 같이 끝에 역사를 지혜는<br>그들은 있으랴?봄날의 실현에 같이,<br> 소금이라 것은 방황하여도,</p>
+                                            </div>
+                                        </div><!-- .flex_wrap end -->
+                                    </div><!-- .info end -->
+                                    <div class="pc_youtube">
+                                        <img src="img/pc_img.png" alt="" />
+                                        <div class="youtube">
+                                            <div>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        </div><!-- .youtube end -->
+                                    </div><!-- .pc_youtube end -->
+                                    <div class="page">
+                                        <p>2 / 2</p>
                                     </div>
-                                </div><!-- .youtube end -->
-                            </div><!-- .pc_youtube end -->
-                            <div class="info">
-                                <strong>촬영, 출연, 편집, 디자인, 특수효과</strong>
-                                <h4>영상 제목 작성하는 곳</h4>
-                                <p>컨셉 및 제작 목적 자신과 커다란 싶이 인류의 무엇을 인간의 듣기만 그리하였는가? 그들의 보는 새가 때에, 듣기만 하는 것이다. 이상을 피가 얼마나 작고 위하여서 보배를 부패뿐이다. 힘차게 속에 피어나는 곳이 현저하게 이것은 풀이 힘차게 칼이다. 끓는 피어나기 피고, 전인 몸이 봄바람을 현저하게 아니다.</p>
-                                <ul class="text">
-                                    <li><strong>프로그램</strong> : 프리미어프로, 애프터이펙트, 마야, 포토샵, 일러스트레이터</li>
-                                    <li><strong>제작일자</strong> : 2022.09</li>
-                                </ul><!-- .text end -->
-                                <ul class="btn">
-                                    <li><a href="#">영상원본보기</a></li>
-                                    <li><a href="#">기획서보기</a></li>
-                                </ul><!-- .btn end -->
-                            </div><!-- .info end -->
-                        </div><!-- .item end -->
-                    </div><!-- 2 -->
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div><!-- .swiper end 2 -->
-            <!-- motion_menu 3 -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="item">
-                            <!-- youtube video-->
-                            <div class="pc_youtube">
-                                <img src="img/pc_img.png" alt="" />
-                                <div class="youtube">
-                                    <div>
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div><!-- .item end -->
+                            </div><!-- .swiper-slide 2 end -->
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div><!-- tab_menu 1 -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="info">
+                                        <div class="flex_wrap">
+                                            <div class="info_1">
+                                                <p>프로젝트 제목</p>
+                                                <ul class="btn">
+                                                    <li><a href="#">영상 원본 보기</a></li>
+                                                    <li><a href="#">기획서 보기</a></li>
+                                                </ul><!-- .btn end -->
+                                            </div><!-- .info_1 end -->
+                                            <div class="bar"></div>
+                                            <div>
+                                                <strong>작업 기간</strong>
+                                                <p>2022.00 ~ 2022.00</p>
+                                            </div>
+                                            <div>
+                                                <strong>참여 인원</strong>
+                                                <p>개인 프로젝트</p>
+                                            </div>
+                                            <div>
+                                                <strong>소개</strong>
+                                                <p>사랑의 어디 같이 끝에 역사를 지혜는<br>그들은 있으랴?봄날의 실현에 같이,<br> 소금이라 것은 방황하여도,</p>
+                                            </div>
+                                        </div><!-- .flex_wrap end -->
+                                    </div><!-- .info end -->
+                                    <div class="pc_youtube">
+                                        <img src="img/pc_img.png" alt="" />
+                                        <div class="youtube">
+                                            <div>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        </div><!-- .youtube end -->
+                                    </div><!-- .pc_youtube end -->
+                                    <div class="page">
+                                        <p>1 / 2</p>
                                     </div>
-                                </div><!-- .youtube end -->
-                            </div><!-- .pc_youtube end -->
-                            <div class="info">
-                                <strong>촬영, 출연, 편집, 디자인, 특수효과</strong>
-                                <h4>영상 제목 작성하는 곳</h4>
-                                <p>컨셉 및 제작 목적 자신과 커다란 싶이 인류의 무엇을 인간의 듣기만 그리하였는가? 그들의 보는 새가 때에, 듣기만 하는 것이다. 이상을 피가 얼마나 작고 위하여서 보배를 부패뿐이다. 힘차게 속에 피어나는 곳이 현저하게 이것은 풀이 힘차게 칼이다. 끓는 피어나기 피고, 전인 몸이 봄바람을 현저하게 아니다.</p>
-                                <ul class="text">
-                                    <li><strong>프로그램</strong> : 프리미어프로, 애프터이펙트, 마야, 포토샵, 일러스트레이터</li>
-                                    <li><strong>제작일자</strong> : 2022.09</li>
-                                </ul><!-- .text end -->
-                                <ul class="btn">
-                                    <li><a href="#">영상원본보기</a></li>
-                                    <li><a href="#">기획서보기</a></li>
-                                </ul><!-- .btn end -->
-                            </div><!-- .info end -->
-                        </div><!-- .item end -->
-                    </div><!-- 1 -->
-                    <div class="swiper-slide">
-                        <div class="item">
-                            <!-- youtube video-->
-                            <div class="pc_youtube">
-                                <img src="img/pc_img.png" alt="" />
-                                <div class="youtube">
-                                    <div>
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div><!-- .item end -->
+                            </div><!-- .swiper-slide 1 end -->
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="info">
+                                        <div class="flex_wrap">
+                                            <div class="info_1">
+                                                <p>프로젝트 제목</p>
+                                                <ul class="btn">
+                                                    <li><a href="#">영상 원본 보기</a></li>
+                                                    <li><a href="#">기획서 보기</a></li>
+                                                </ul><!-- .btn end -->
+                                            </div><!-- .info_1 end -->
+                                            <div class="bar"></div>
+                                            <div>
+                                                <strong>작업 기간</strong>
+                                                <p>2022.00 ~ 2022.00</p>
+                                            </div>
+                                            <div>
+                                                <strong>참여 인원</strong>
+                                                <p>개인 프로젝트</p>
+                                            </div>
+                                            <div>
+                                                <strong>소개</strong>
+                                                <p>사랑의 어디 같이 끝에 역사를 지혜는<br>그들은 있으랴?봄날의 실현에 같이,<br> 소금이라 것은 방황하여도,</p>
+                                            </div>
+                                        </div><!-- .flex_wrap end -->
+                                    </div><!-- .info end -->
+                                    <div class="pc_youtube">
+                                        <img src="img/pc_img.png" alt="" />
+                                        <div class="youtube">
+                                            <div>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        </div><!-- .youtube end -->
+                                    </div><!-- .pc_youtube end -->
+                                    <div class="page">
+                                        <p>2 / 2</p>
                                     </div>
-                                </div><!-- .youtube end -->
-                            </div><!-- .pc_youtube end -->
-                            <div class="info">
-                                <strong>촬영, 출연, 편집, 디자인, 특수효과</strong>
-                                <h4>영상 제목 작성하는 곳</h4>
-                                <p>컨셉 및 제작 목적 자신과 커다란 싶이 인류의 무엇을 인간의 듣기만 그리하였는가? 그들의 보는 새가 때에, 듣기만 하는 것이다. 이상을 피가 얼마나 작고 위하여서 보배를 부패뿐이다. 힘차게 속에 피어나는 곳이 현저하게 이것은 풀이 힘차게 칼이다. 끓는 피어나기 피고, 전인 몸이 봄바람을 현저하게 아니다.</p>
-                                <ul class="text">
-                                    <li><strong>프로그램</strong> : 프리미어프로, 애프터이펙트, 마야, 포토샵, 일러스트레이터</li>
-                                    <li><strong>제작일자</strong> : 2022.09</li>
-                                </ul><!-- .text end -->
-                                <ul class="btn">
-                                    <li><a href="#">영상원본보기</a></li>
-                                    <li><a href="#">기획서보기</a></li>
-                                </ul><!-- .btn end -->
-                            </div><!-- .info end -->
-                        </div><!-- .item end -->
-                    </div><!-- 2 -->
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div><!-- .swiper end 3 -->
+                                </div><!-- .item end -->
+                            </div><!-- .swiper-slide 2 end -->
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div><!-- tab_menu 2 -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="info">
+                                        <div class="flex_wrap">
+                                            <div class="info_1">
+                                                <p>프로젝트 제목</p>
+                                                <ul class="btn">
+                                                    <li><a href="#">영상 원본 보기</a></li>
+                                                    <li><a href="#">기획서 보기</a></li>
+                                                </ul><!-- .btn end -->
+                                            </div><!-- .info_1 end -->
+                                            <div class="bar"></div>
+                                            <div>
+                                                <strong>작업 기간</strong>
+                                                <p>2022.00 ~ 2022.00</p>
+                                            </div>
+                                            <div>
+                                                <strong>참여 인원</strong>
+                                                <p>개인 프로젝트</p>
+                                            </div>
+                                            <div>
+                                                <strong>소개</strong>
+                                                <p>사랑의 어디 같이 끝에 역사를 지혜는<br>그들은 있으랴?봄날의 실현에 같이,<br> 소금이라 것은 방황하여도,</p>
+                                            </div>
+                                        </div><!-- .flex_wrap end -->
+                                    </div><!-- .info end -->
+                                    <div class="pc_youtube">
+                                        <img src="img/pc_img.png" alt="" />
+                                        <div class="youtube">
+                                            <div>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        </div><!-- .youtube end -->
+                                    </div><!-- .pc_youtube end -->
+                                    <div class="page">
+                                        <p>1 / 2</p>
+                                    </div>
+                                </div><!-- .item end -->
+                            </div><!-- .swiper-slide 1 end -->
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="info">
+                                        <div class="flex_wrap">
+                                            <div class="info_1">
+                                                <p>프로젝트 제목</p>
+                                                <ul class="btn">
+                                                    <li><a href="#">영상 원본 보기</a></li>
+                                                    <li><a href="#">기획서 보기</a></li>
+                                                </ul><!-- .btn end -->
+                                            </div><!-- .info_1 end -->
+                                            <div class="bar"></div>
+                                            <div>
+                                                <strong>작업 기간</strong>
+                                                <p>2022.00 ~ 2022.00</p>
+                                            </div>
+                                            <div>
+                                                <strong>참여 인원</strong>
+                                                <p>개인 프로젝트</p>
+                                            </div>
+                                            <div>
+                                                <strong>소개</strong>
+                                                <p>사랑의 어디 같이 끝에 역사를 지혜는<br>그들은 있으랴?봄날의 실현에 같이,<br> 소금이라 것은 방황하여도,</p>
+                                            </div>
+                                        </div><!-- .flex_wrap end -->
+                                    </div><!-- .info end -->
+                                    <div class="pc_youtube">
+                                        <img src="img/pc_img.png" alt="" />
+                                        <div class="youtube">
+                                            <div>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        </div><!-- .youtube end -->
+                                    </div><!-- .pc_youtube end -->
+                                    <div class="page">
+                                        <p>2 / 2</p>
+                                    </div>
+                                </div><!-- .item end -->
+                            </div><!-- .swiper-slide 2 end -->
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div><!-- tab_menu 3 -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="info">
+                                        <div class="flex_wrap">
+                                            <div class="info_1">
+                                                <p>프로젝트 제목</p>
+                                                <ul class="btn">
+                                                    <li><a href="#">영상 원본 보기</a></li>
+                                                    <li><a href="#">기획서 보기</a></li>
+                                                </ul><!-- .btn end -->
+                                            </div><!-- .info_1 end -->
+                                            <div class="bar"></div>
+                                            <div>
+                                                <strong>작업 기간</strong>
+                                                <p>2022.00 ~ 2022.00</p>
+                                            </div>
+                                            <div>
+                                                <strong>참여 인원</strong>
+                                                <p>개인 프로젝트</p>
+                                            </div>
+                                            <div>
+                                                <strong>소개</strong>
+                                                <p>사랑의 어디 같이 끝에 역사를 지혜는<br>그들은 있으랴?봄날의 실현에 같이,<br> 소금이라 것은 방황하여도,</p>
+                                            </div>
+                                        </div><!-- .flex_wrap end -->
+                                    </div><!-- .info end -->
+                                    <div class="pc_youtube">
+                                        <img src="img/pc_img.png" alt="" />
+                                        <div class="youtube">
+                                            <div>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        </div><!-- .youtube end -->
+                                    </div><!-- .pc_youtube end -->
+                                    <div class="page">
+                                        <p>1 / 2</p>
+                                    </div>
+                                </div><!-- .item end -->
+                            </div><!-- .swiper-slide 1 end -->
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="info">
+                                        <div class="flex_wrap">
+                                            <div class="info_1">
+                                                <p>프로젝트 제목</p>
+                                                <ul class="btn">
+                                                    <li><a href="#">영상 원본 보기</a></li>
+                                                    <li><a href="#">기획서 보기</a></li>
+                                                </ul><!-- .btn end -->
+                                            </div><!-- .info_1 end -->
+                                            <div class="bar"></div>
+                                            <div>
+                                                <strong>작업 기간</strong>
+                                                <p>2022.00 ~ 2022.00</p>
+                                            </div>
+                                            <div>
+                                                <strong>참여 인원</strong>
+                                                <p>개인 프로젝트</p>
+                                            </div>
+                                            <div>
+                                                <strong>소개</strong>
+                                                <p>사랑의 어디 같이 끝에 역사를 지혜는<br>그들은 있으랴?봄날의 실현에 같이,<br> 소금이라 것은 방황하여도,</p>
+                                            </div>
+                                        </div><!-- .flex_wrap end -->
+                                    </div><!-- .info end -->
+                                    <div class="pc_youtube">
+                                        <img src="img/pc_img.png" alt="" />
+                                        <div class="youtube">
+                                            <div>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        </div><!-- .youtube end -->
+                                    </div><!-- .pc_youtube end -->
+                                    <div class="page">
+                                        <p>2 / 2</p>
+                                    </div>
+                                </div><!-- .item end -->
+                            </div><!-- .swiper-slide 2 end -->
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div><!-- tab_menu 4 -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="info">
+                                        <div class="flex_wrap">
+                                            <div class="info_1">
+                                                <p>프로젝트 제목</p>
+                                                <ul class="btn">
+                                                    <li><a href="#">영상 원본 보기</a></li>
+                                                    <li><a href="#">기획서 보기</a></li>
+                                                </ul><!-- .btn end -->
+                                            </div><!-- .info_1 end -->
+                                            <div class="bar"></div>
+                                            <div>
+                                                <strong>작업 기간</strong>
+                                                <p>2022.00 ~ 2022.00</p>
+                                            </div>
+                                            <div>
+                                                <strong>참여 인원</strong>
+                                                <p>개인 프로젝트</p>
+                                            </div>
+                                            <div>
+                                                <strong>소개</strong>
+                                                <p>사랑의 어디 같이 끝에 역사를 지혜는<br>그들은 있으랴?봄날의 실현에 같이,<br> 소금이라 것은 방황하여도,</p>
+                                            </div>
+                                        </div><!-- .flex_wrap end -->
+                                    </div><!-- .info end -->
+                                    <div class="pc_youtube">
+                                        <img src="img/pc_img.png" alt="" />
+                                        <div class="youtube">
+                                            <div>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        </div><!-- .youtube end -->
+                                    </div><!-- .pc_youtube end -->
+                                    <div class="page">
+                                        <p>1 / 2</p>
+                                    </div>
+                                </div><!-- .item end -->
+                            </div><!-- .swiper-slide 1 end -->
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="info">
+                                        <div class="flex_wrap">
+                                            <div class="info_1">
+                                                <p>프로젝트 제목</p>
+                                                <ul class="btn">
+                                                    <li><a href="#">영상 원본 보기</a></li>
+                                                    <li><a href="#">기획서 보기</a></li>
+                                                </ul><!-- .btn end -->
+                                            </div><!-- .info_1 end -->
+                                            <div class="bar"></div>
+                                            <div>
+                                                <strong>작업 기간</strong>
+                                                <p>2022.00 ~ 2022.00</p>
+                                            </div>
+                                            <div>
+                                                <strong>참여 인원</strong>
+                                                <p>개인 프로젝트</p>
+                                            </div>
+                                            <div>
+                                                <strong>소개</strong>
+                                                <p>사랑의 어디 같이 끝에 역사를 지혜는<br>그들은 있으랴?봄날의 실현에 같이,<br> 소금이라 것은 방황하여도,</p>
+                                            </div>
+                                        </div><!-- .flex_wrap end -->
+                                    </div><!-- .info end -->
+                                    <div class="pc_youtube">
+                                        <img src="img/pc_img.png" alt="" />
+                                        <div class="youtube">
+                                            <div>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/DABKfQtdCZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        </div><!-- .youtube end -->
+                                    </div><!-- .pc_youtube end -->
+                                    <div class="page">
+                                        <p>2 / 2</p>
+                                    </div>
+                                </div><!-- .item end -->
+                            </div><!-- .swiper-slide 2 end -->
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div><!-- tab_menu 5 -->
+                </div><!-- .inner end -->
+            </section><!-- .cont01 end -->
+        </div><!-- #section1 end -->
 
 
-        </div><!-- .inner end -->
-    </section><!-- .cont01 end -->
+        <div class="section " id="section2">
+            <section class="cont02">
+                <div class="inner">
+                    <div class="title">
+                        <div class="title_flex">
+                            <h3>Web Design & Publishing</h3>
+                            <p>｜VS Code & Photoshop</p>
+                        </div><!-- .title_flex end -->
+                        <div class="tab_menu">
+                            <ul>
+                                <li class="on">Web 1</li>
+                                <li>Web 2</li>
+                            </ul>
+                        </div><!-- .tab_menu end -->
+                    </div><!-- .title end -->
+                </div><!-- .inner end -->
+            </section><!-- .cont02 end -->
+        </div><!-- #section2 end -->
 
 
-    <section class="cont03">
-        <div class="title inner">
-            <h3>웹디자인</h3>
-            <p>접근성, 호환성을 고려한 웹사이트 리뉴얼</p>
-        </div><!-- .title end -->
-        <div class="list inner">
-            <div class="item"><!-- 1 -->
-                <img src="img/img03_2.jpg" alt="랭킹닭컴" />
-                <div class="info">
-                    <h4>랭킹닭컴 웹사이트 리뉴얼</h4>
-                    <p>제작 목적, 콘셉트, 웹사이트 리뉴얼을 위해 기획, 디자인, html, css언어를 활용하여 웹사이트를 구현하였습니다.</p>
-                    <ul class="text">
-                        <li><strong>프로그램</strong> : 포토샵, VScode</li>
-                        <li><strong>사용언어</strong> : html, css</li>
-                        <li><strong>제작일자</strong> : 2022.08</li>
-                    </ul><!-- .text end -->
-                    <ul class="btn">
-                        <li><a href="sub/web1/proposal.jpg" target="_blank">기획서 및 작업 과정</a></li>                    
-                        <li><a href="sub/web1/index.html" target="_blank">사이트 보기</a></li>                    
-                    </ul><!-- .btn end -->
-                </div><!-- .info end -->
-            </div><!-- .item end 1 -->
-            <div class="item"><!-- 2 -->
-                <img src="img/thenorthface.png" alt="The Northface" />
-                <div class="info">
-                    <h4>The Northface 리뉴얼</h4>
-                    <p>제작 목적, 콘셉트, 웹사이트 리뉴얼을 위해 기획, 디자인, html, css언어를 활용하여 웹사이트를 구현하였습니다.</p>
-                    <ul class="text">
-                        <li><strong>프로그램</strong> : 포토샵, VScode</li>
-                        <li><strong>사용언어</strong> : html, css</li>
-                        <li><strong>제작일자</strong> : 2022.08</li>
-                    </ul><!-- .text end -->
-                    <ul class="btn">
-                        <li><a href="sub/web2/proposal.jpg" target="_blank">기획서 및 작업 과정</a></li>                    
-                        <li><a href="sub/web2/index.html" target="_blank">사이트 보기</a></li>                    
-                    </ul><!-- .btn end -->
-                </div><!-- .info end -->
-            </div><!-- .item end 2 -->
-        </div><!-- .list end -->
-    </section><!-- .cont03 end -->
-
-    
-    <section class="cont04">
-        <div class="inner">
-            <div class="title">
-                <h3>그래픽디자인</h3>
-                <p>2D, 3D그래픽을 포토샵, 일러스트레이터를 이용하여 디자인을 제작하였습니다.</p>
-            </div><!-- .title end -->
-            <div class="list">
-                <a href="img/cont03_1.jpg" data-fancybox="images">
-                    <img src="img/cont03_1.jpg" alt="" />
-                    <div class="info">
-                        <h4>그래픽디자인 제목</h4>
-                        <p>사용한 프로그램</p>
-                    </div><!-- .info end -->
-                </a>
-                <a href="img/cont03_1.jpg" data-fancybox="images">
-                    <img src="img/cont03_1.jpg" alt="" />
-                    <div class="info">
-                        <h4>그래픽디자인 제목</h4>
-                        <p>사용한 프로그램</p>
-                    </div><!-- .info end -->
-                </a>
-                <a href="img/cont03_1.jpg" data-fancybox="images">
-                    <img src="img/cont03_1.jpg" alt="" />
-                    <div class="info">
-                        <h4>그래픽디자인 제목</h4>
-                        <p>사용한 프로그램</p>
-                    </div><!-- .info end -->
-                </a>
-                <a href="img/cont03_1.jpg" data-fancybox="images">
-                    <img src="img/cont03_1.jpg" alt="" />
-                    <div class="info">
-                        <h4>그래픽디자인 제목</h4>
-                        <p>사용한 프로그램</p>
-                    </div><!-- .info end -->
-                </a>
-                <a href="img/cont03_1.jpg" data-fancybox="images">
-                    <img src="img/cont03_1.jpg" alt="" />
-                    <div class="info">
-                        <h4>그래픽디자인 제목</h4>
-                        <p>사용한 프로그램</p>
-                    </div><!-- .info end -->
-                </a>
-            </div><!-- .list end -->
-        </div><!-- .inner end -->
-    </section><!-- .cont04 end -->
+        <div class="section " id="section3">
+            <section class="cont03">
+                <div class="inner">
+                    <div class="title">
+                        <div class="title_flex">
+                            <h3>2D Design</h3>
+                            <p>｜Photoshop & Illustrator</p>
+                        </div><!-- .title_flex end -->
+                    </div><!-- .title end -->
+                </div><!-- .inner end -->
+            </section><!-- .cont02 end -->
+        </div><!-- #section2 end -->
 
 
-    <section class="cont05">
-        <div class="inner">
-            <div class="title">
-                <h3>나의 소개</h3>
-                <p>나의 경력, 이력, 스킬을 공유합니다.</p>
-            </div><!-- .title end -->
-            <div class="info">
-                <div class="info_img">
-                    <img src="img/cont03_2.jpg" alt="" />
-                </div><!-- .info_img end -->
-                <div class="text">
-                    <ul>
-                        <li><strong>이름</strong></li>
-                        <li>김민성</li>
-                    </ul>
-                    <ul>
-                        <li><strong>연락처</strong></li>
-                        <li>010-0000-0000</li>
-                    </ul>
-                    <ul>
-                        <li><strong>생년월일</strong></li>
-                        <li>1995.01.12</li>
-                    </ul>
-                    <ul>
-                        <li><strong>카카오톡ID</strong></li>
-                        <li>카카오톡ID</li>
-                    </ul>
-                    <ul>
-                        <li><strong>경력</strong></li>
-                        <li>어디에서 무엇을?<br>어디에서 무엇을?<br>어디에서 무엇을?</li>
-                    </ul>
-                    <ul>
-                        <li><strong>교육</strong></li>
-                        <li>[멀티미디어콘텐츠제작]스마트-영상편집&웹<br>(프리미어,에펙,시네마4D)</li>
-                    </ul>
-                    <ul class="list">
-                        <li>#웹제작</li>
-                        <li class="v">#영상편집</li>
-                        <li>#html</li>
-                        <li>#css</li>
-                        <li>#jquery</li>
-                        <li>#포토샵</li>
-                        <li>#일러스트</li>
-                        <li class="v">#프리미어프로</li>
-                        <li class="v">#애프터이펙트</li>
-                        <li class="v">#마야</li>
-                        <li class="v">#4D</li>
-                    </ul><!-- .list end -->
-                </div><!-- .text end -->
-            </div><!-- .info end -->
-        </div><!-- .inner end -->
-    </section><!-- .cont05 end -->
+        <div class="section " id="section4">
+            <section class="cont03">
+                <div class="inner">
+                    <div class="title">
+                        <div class="title_flex">
+                            <h3>About Me</h3>
+                            <p>｜Skills & Personality</p>
+                        </div><!-- .title_flex end -->
+                    </div><!-- .title end -->
+                </div><!-- .inner end -->
+            </section><!-- .cont02 end -->
+        </div><!-- #section2 end -->
 
 
-    <footer>
-        <ul>
-            <li><a href="#">유튜브채널 이동</a></li>
-            <li><a href="#" download="">지원서 다운로드</a></li>
-        </ul>
-        <p>Copyright 2022. Designer 김민성. All Rights Reserved.</p>
-        <p>본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다<br>사용된 일부 이미지 및 폰트 등은 별도의 출처가 있음을 밝힙니다.</p>
-    </footer>
+        <!-- fp-auto-height -->
+        <div class="section fp-auto-height" id="footer">
+            <ul>
+                <li><a href="#">유튜브채널 이동</a></li>
+                <li><a href="#" download="">지원서 다운로드</a></li>
+            </ul>
+            <p>Copyright 2022. Designer 김민성. All Rights Reserved.</p>
+            <p>본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다<br>사용된 일부 이미지 및 폰트 등은 별도의 출처가 있음을 밝힙니다.</p>
+        </div>
+
+
+    </div><!-- #fullpage end -->
+
+
+
+
+    <script type="text/javascript">
+        var myFullpage = new fullpage('#fullpage', {
+            anchors: ['firstPage', 'secondPage', '3rdPage'], //페이지 이름
+            //sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+            navigation: true, //우측 페이지 내비
+            navigationPosition: 'right', //내비 위치
+            navigationTooltips: ['Main Page', 'Video Editing', 'Web Design & Publishing', '2D Design', 'About Me', 'Fin'] //내비에 hover 시에 명칭
+        });
+    </script>
 </body>
 </html>
