@@ -10,6 +10,8 @@
     />
     <!-- Full Page's CSS -->
     <link rel="stylesheet" href="lib/fullpage.css" />
+    <!-- facncybox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- style css -->
     <link rel="stylesheet" href="css/main.css">
@@ -20,6 +22,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- Full Page's JS -->
     <script src="lib/fullpage.min.js"></script>
+    <!-- facnybox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
         $(function(){
@@ -33,12 +37,19 @@
                     prevEl: ".swiper-button-prev",
                 },
             });
-            $('.tab_menu ul li').click(function(){
-                $('.tab_menu ul li').removeClass('on');
+            $('.cont01 .tab_menu ul li').click(function(){
+                $('.cont01 .tab_menu ul li').removeClass('on');
                 $(this).addClass('on');
 
                 $('.mySwiper').removeClass('on');
                 $('.mySwiper').eq($(this).index()).addClass('on');
+            });
+            $('.cont02 .tab_menu ul li').click(function(){
+                $('.cont02 .tab_menu ul li').removeClass('on');
+                $(this).addClass('on');
+
+                $('.cont02 .list').removeClass('on');
+                $('.cont02 .list').eq($(this).index()).addClass('on');
             });
         });
     </script>
@@ -56,7 +67,7 @@
                         <li><a href="#">Video Editing</a></li>
                         <li><a href="#">Web Design & Publishing</a></li>
                         <li><a href="#">2D Design</a></li>
-                        <li><a href="#">About Me</a></li>
+                        <li><a href="#">Resume</a></li>
                     </ul>
                 </nav>
             </div><!-- .inner end -->
@@ -535,6 +546,154 @@
                             </ul>
                         </div><!-- .tab_menu end -->
                     </div><!-- .title end -->
+                    <div class="list on">
+                        <div class="flex_wrap">
+                            <div class="item">
+                                <div class="img_box">
+                                    <img src="img/web1.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="info_1">
+                                        <p>랭킹닭컴</p>
+                                        <ul>
+                                            <li>
+                                                <a href="sub/web1/proposal.jpg" target="_blank">기획서 보기</a>
+                                            </li>
+                                            <li>
+                                                <a href="sub/web1/index.html" target="_blank">사이트 보기</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="info_2">
+                                        <div class="bar"></div>
+                                        <div class="text">
+                                            <div>
+                                                <strong>작업 기간</strong>
+                                                <p>2022.00 ~ 2022.00</p>
+                                            </div>
+                                            <div>
+                                                <strong>사용 언어</strong>
+                                                <p>HTML, CSS, JS</p>
+                                            </div>
+                                            <div>
+                                                <strong>소개</strong>
+                                                <p>사랑의 어디 같이 끝에 역사를 지혜는 그들은 있으랴? 봄날의 실현에 같이, 소금이라 것은 방황하여도,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- .info end -->
+                            </div><!-- .item end 1 -->
+                            <div class="item">
+                                <div class="img_box">
+                                    <img src="img/web2.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="info_1">
+                                        <p>노스페이스</p>
+                                        <ul>
+                                            <li>
+                                                <a href="sub/web2/proposal.jpg" target="_blank">기획서 보기</a>
+                                            </li>
+                                            <li>
+                                                <a href="sub/web2/index.html" target="_blank">사이트 보기</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="info_2">
+                                        <div class="bar"></div>
+                                        <div class="text">
+                                            <div>
+                                                <strong>작업 기간</strong>
+                                                <p>2022.00 ~ 2022.00</p>
+                                            </div>
+                                            <div>
+                                                <strong>사용 언어</strong>
+                                                <p>HTML, CSS, JS</p>
+                                            </div>
+                                            <div>
+                                                <strong>소개</strong>
+                                                <p>사랑의 어디 같이 끝에 역사를 지혜는 그들은 있으랴?봄날의 실현에 같이, 소금이라 것은 방황하여도,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- .info end -->
+                            </div><!-- .item end 2 -->
+                        </div><!-- .flex_wrap end 1 -->
+                    </div><!-- .list end 1 -->
+                    <div class="list">
+                        <div class="flex_wrap">
+                            <div class="item">
+                                <div class="img_box">
+                                    <img src="img/web3.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="info_1">
+                                        <p>Web 3</p>
+                                        <ul>
+                                            <li>
+                                                <a href="#">기획서 보기</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">사이트 보기</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="info_2">
+                                        <div class="bar"></div>
+                                        <div class="text">
+                                            <div>
+                                                <strong>작업 기간</strong>
+                                                <p>2022.00 ~ 2022.00</p>
+                                            </div>
+                                            <div>
+                                                <strong>사용 언어</strong>
+                                                <p>HTML, CSS, JS</p>
+                                            </div>
+                                            <div>
+                                                <strong>소개</strong>
+                                                <p>사랑의 어디 같이 끝에 역사를 지혜는 그들은 있으랴? 봄날의 실현에 같이, 소금이라 것은 방황하여도,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- .info end -->
+                            </div><!-- .item end 1 -->
+                            <div class="item">
+                                <div class="img_box">
+                                    <img src="img/web3.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="info_1">
+                                        <p>Web 4</p>
+                                        <ul>
+                                            <li>
+                                                <a href="#">기획서 보기</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">사이트 보기</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="info_2">
+                                        <div class="bar"></div>
+                                        <div class="text">
+                                            <div>
+                                                <strong>작업 기간</strong>
+                                                <p>2022.00 ~ 2022.00</p>
+                                            </div>
+                                            <div>
+                                                <strong>사용 언어</strong>
+                                                <p>HTML, CSS, JS</p>
+                                            </div>
+                                            <div>
+                                                <strong>소개</strong>
+                                                <p>사랑의 어디 같이 끝에 역사를 지혜는 그들은 있으랴?봄날의 실현에 같이, 소금이라 것은 방황하여도,</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- .info end -->
+                            </div><!-- .item end 2 -->
+                        </div><!-- .flex_wrap end 2 -->
+                    </div><!-- .list end 2 -->
                 </div><!-- .inner end -->
             </section><!-- .cont02 end -->
         </div><!-- #section2 end -->
@@ -549,23 +708,173 @@
                             <p>｜Photoshop & Illustrator</p>
                         </div><!-- .title_flex end -->
                     </div><!-- .title end -->
+                    <div class="list">
+                        <a href="img/menu_1080.gif" data-fancybox="images">
+                            <img src="img/menu_1080.gif" alt="" />
+                            <div class="info">
+                                <h4>그래픽디자인 제목</h4>
+                                <p>사용한 프로그램</p>
+                            </div><!-- .info end -->
+                        </a>
+                        <a href="img/cont03_1.jpg" data-fancybox="images">
+                            <img src="img/cont03_1.jpg" alt="" />
+                            <div class="info">
+                                <h4>그래픽디자인 제목</h4>
+                                <p>사용한 프로그램</p>
+                            </div><!-- .info end -->
+                        </a>
+                        <a href="img/cont03_1.jpg" data-fancybox="images">
+                            <img src="img/cont03_1.jpg" alt="" />
+                            <div class="info">
+                                <h4>그래픽디자인 제목</h4>
+                                <p>사용한 프로그램</p>
+                            </div><!-- .info end -->
+                        </a>
+                        <a href="img/cont03_1.jpg" data-fancybox="images">
+                            <img src="img/cont03_1.jpg" alt="" />
+                            <div class="info">
+                                <h4>그래픽디자인 제목</h4>
+                                <p>사용한 프로그램</p>
+                            </div><!-- .info end -->
+                        </a>
+                        <a href="img/cont03_1.jpg" data-fancybox="images">
+                            <img src="img/cont03_1.jpg" alt="" />
+                            <div class="info">
+                                <h4>그래픽디자인 제목</h4>
+                                <p>사용한 프로그램</p>
+                            </div><!-- .info end -->
+                        </a>
+                    </div><!-- .list end -->
                 </div><!-- .inner end -->
             </section><!-- .cont02 end -->
-        </div><!-- #section2 end -->
+        </div><!-- #section3 end -->
 
 
         <div class="section " id="section4">
-            <section class="cont03">
+            <section class="cont04">
                 <div class="inner">
                     <div class="title">
                         <div class="title_flex">
-                            <h3>About Me</h3>
-                            <p>｜Skills & Personality</p>
+                            <h3>Resume</h3>
+                            <p>｜Personal info</p>
                         </div><!-- .title_flex end -->
                     </div><!-- .title end -->
+                    <div class="list">
+                        <div class="box1">
+                            <div class="img">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="text">
+                                <div class="text1">
+                                    <strong>김민성(Kim Minseong) / 1995.01.12</strong>
+                                </div>
+                                <div class="text2">
+                                    <p>+82 10.0000.0000</p>
+                                    <p>95kimminseong@gmail.com</p>
+                                    <p>https://tenine95.github.io/html/</p>
+                                </div>
+                                <div class="text3">
+                                    <p>안녕하세요.<br>사랑의 어디 같이 끝에 역사를 지혜는 그들은<br> 있으랴? 봄날의 실현에 같이, 소금이라 것은<br>방황하여도,</p>
+                                </div>
+                            </div>
+                        </div><!-- .box1 end -->
+                        <div class="box2">
+                            <div class="text1">
+                                <strong>EDUCATION</strong>
+                                <div class="flex_wrap">
+                                    <div class="text1_1">
+                                        <p>부산대학교 수료</p>
+                                        <p>부산진고등학교 졸업</p>
+                                    </div>
+                                    <div class="text1_2">
+                                        <p>00.00 ~ 00.00</p>
+                                        <p>00.00 ~ 00.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text2">
+                                <strong>CAREER</strong>
+                                <div class="flex_wrap">
+                                    <div class="text1_1">
+                                        <p>경력 사항을 작성하세요</p>
+                                        <p>경력 사항을 작성하세요</p>
+                                    </div>
+                                    <div class="text1_2">
+                                        <p>00.00 ~ 00.00</p>
+                                        <p>00.00 ~ 00.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text3">
+                                <strong>ACTIVITY</strong>
+                                <div class="flex_wrap">
+                                    <div class="text1_1">
+                                        <p>활동 사항을 작성하세요</p>
+                                        <p>활동 사항을 작성하세요</p>
+                                    </div>
+                                    <div class="text1_2">
+                                        <p>00.00 ~ 00.00</p>
+                                        <p>00.00 ~ 00.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text4">
+                                <strong>CERTIFICATE</strong>
+                                <div class="flex_wrap">
+                                    <div class="text1_1">
+                                        <p>컴퓨터그래픽스운용기능사</p>
+                                        <p>정보처리기능사</p>
+                                    </div>
+                                    <div class="text1_2">
+                                        <p>00.00</p>
+                                        <p>00.00</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .box2 end -->
+                        <div class="box3">
+                            <div class="text1">
+                                <strong>TOOL</strong>
+                                <div class="flex_wrap">
+                                    <div class="text1_1">
+                                        <p>Adobe Premiere Pro</p>
+                                        <p>Adobe After Effect</p>
+                                        <p>Adobe Photoshop</p>
+                                        <p>Adobe Illustrator</p>
+                                        <p>Adobe Indesign</p>
+                                        <p>VS Code</p>
+                                    </div>
+                                    <div class="text1_2">
+                                        <p>00%</p>
+                                        <p>00%</p>
+                                        <p>00%</p>
+                                        <p>00%</p>
+                                        <p>00%</p>
+                                        <p>00%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text2">
+                                <strong>PERSONALITY</strong>
+                                <p>성격 관련 내용을 작성하세요</p>
+                                <p>성격 관련 내용을 작성하세요</p>
+                            </div>
+                            <div class="text3">
+                                <strong>INTEREST</strong>
+                                <p>흥미, 취미 관련 내용을 작성하세요</p>
+                                <p>흥미, 취미 관련 내용을 작성하세요</p>
+                            </div>
+                            <div class="text4">
+                                <strong>ETC</strong>
+                                <p>기타 내용을 작성하세요</p>
+                                <p>기타 내용을 작성하세요</p>
+                            </div>
+                        </div><!-- .box3 end -->
+                    </div><!-- .list end -->
                 </div><!-- .inner end -->
-            </section><!-- .cont02 end -->
-        </div><!-- #section2 end -->
+            </section><!-- .cont04 end -->
+        </div><!-- #section4 end -->
 
 
         <!-- fp-auto-height -->
@@ -575,7 +884,7 @@
                 <li><a href="#" download="">지원서 다운로드</a></li>
             </ul>
             <p>Copyright 2022. Designer 김민성. All Rights Reserved.</p>
-            <p>본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다<br>사용된 일부 이미지 및 폰트 등은 별도의 출처가 있음을 밝힙니다.</p>
+            <p>본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다.<br>사용된 일부 이미지 및 폰트 등은 별도의 출처가 있음을 밝힙니다.</p>
         </div>
 
 
@@ -586,11 +895,11 @@
 
     <script type="text/javascript">
         var myFullpage = new fullpage('#fullpage', {
-            anchors: ['firstPage', 'secondPage', '3rdPage'], //페이지 이름
+            anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage', '6thPage'], //페이지 이름
             //sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
             navigation: true, //우측 페이지 내비
             navigationPosition: 'right', //내비 위치
-            navigationTooltips: ['Main Page', 'Video Editing', 'Web Design & Publishing', '2D Design', 'About Me', 'Fin'] //내비에 hover 시에 명칭
+            navigationTooltips: ['Main Page', 'Video Editing', 'Web Design & Publishing', '2D Design', 'Resume', 'Fin'] //내비에 hover 시에 명칭
         });
     </script>
 </body>

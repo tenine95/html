@@ -29,12 +29,17 @@ a {
 }
 .swiper-button-next, .swiper-button-prev {
     color: #333;
+    display: none;
+    /* 디자인 추후 고려 */
 }
 .swiper-button-prev {
     position: absolute;
 }
 .swiper-button-next {
     position: absolute;
+}
+#fp-nav ul li .fp-tooltip {
+    overflow: inherit;
 }
 
 
@@ -81,7 +86,7 @@ header .inner nav ul li a:hover {
 .main_visual {
     height: 100vh;
     position: relative;
-    background-color: #ddd;
+    background-color: #eee;
 }
 .main_visual .img {
     width: 100%;
@@ -196,9 +201,9 @@ header .inner nav ul li a:hover {
 
 .cont01 .inner .mySwiper .swiper-wrapper .swiper-slide .item .info .flex_wrap .bar {
     width: 18px;
-    height: 4px;
+    height: 2px;
     background-color: #333;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 .cont01 .inner .mySwiper .swiper-wrapper .swiper-slide .item .info .flex_wrap > div {
     margin-bottom: 30px;
@@ -271,6 +276,7 @@ header .inner nav ul li a:hover {
     position: relative;
 }
 .cont02 .inner .title {
+    margin-bottom: 35px;
 
 }
 .cont02 .inner .title .title_flex {
@@ -309,6 +315,90 @@ header .inner nav ul li a:hover {
     color: #333;
 }
 
+.cont02 .inner .list {
+    display: none;
+    width: 100%;
+    height: calc(100% - 65px);
+}
+.cont02 .inner .list.on {
+    display: block;
+}
+.cont02 .inner .list .flex_wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.cont02 .inner .flex_wrap .item {
+    width: 680px;
+    height: 100%
+}
+.cont02 .inner .flex_wrap .item .img_box {
+    width: 680px;
+    height: 480px;
+}
+.cont02 .inner .flex_wrap .item .img_box img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+.cont02 .inner .flex_wrap .item .info {
+    height: calc(100% - 480px);
+    position: relative;
+}
+.cont02 .inner .flex_wrap .item .info .info_1 {
+    display: flex;
+    align-items: baseline;
+}
+.cont02 .inner .flex_wrap .item .info .info_1 p {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+.cont02 .inner .flex_wrap .item .info .info_1 ul {
+    display: flex;
+}
+.cont02 .inner .flex_wrap .item .info .info_1 ul li {
+    margin-right: 10px;
+}
+.cont02 .inner .flex_wrap .item .info .info_1 ul li a {
+    display: inline-block;
+}
+.cont02 .inner .flex_wrap .item .info .info_2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.cont02 .inner .flex_wrap .item .info .info_2 .bar {
+    width: 18px;
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 15px;
+}
+.cont02 .inner .flex_wrap .item .info .info_2 .text {
+}
+.cont02 .inner .flex_wrap .item .info .info_2 .text > div {
+    display: flex;
+    margin-bottom: 20px;
+}
+.cont02 .inner .flex_wrap .item .info .info_2 .text > div:nth-of-type(3) {
+    margin-bottom: 0;
+}
+.cont02 .inner .flex_wrap .item .info .info_2 .text > div strong {
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-block;
+    margin-right: 10px;
+}
+.cont02 .inner .flex_wrap .item .info .info_2 .text > div p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #444;
+    margin-right: 20px;
+}
+
 
 /* .cont03 */
 .cont03 {
@@ -339,6 +429,30 @@ header .inner nav ul li a:hover {
     font-family: 'Poppins';
     font-weight: 300;
 }
+.cont03 .list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+    align-items: flex-end;
+}
+.cont03 .list a {
+    width: 270px;
+}
+.cont03 .list a img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    display: block;
+}
+.cont03 .list a .info {
+    background-color: #fff;
+    padding: 20px 10px;
+}
+.cont03 .list a .info h4 {
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+.cont03 .list a .info p {}
 
 
 /* .cont04 */
@@ -355,7 +469,8 @@ header .inner nav ul li a:hover {
     position: relative;
 }
 .cont04 .inner .title {
-    
+    width: 100%;
+    height: 80px;
 }
 .cont04 .inner .title .title_flex {
     display: flex;
@@ -369,6 +484,115 @@ header .inner nav ul li a:hover {
 .cont04 .inner .title .title_flex p {
     font-family: 'Poppins';
     font-weight: 300;
+}
+.cont04 .inner .list {
+    width: 100%;
+    height: calc(100% - 80px);
+    display: flex;
+    align-items: flex-end;
+}
+.cont04 .inner .list .box1 {
+    width: 480px;
+    height: 100%;
+    position: relative;
+}
+.cont04 .inner .list .box1 .img {
+    width: 300px;
+    height: 400px;
+    background-color: #eee;
+}
+.cont04 .inner .list .box1 .img img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.cont04 .inner .list .box1 .text {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.cont04 .inner .list .box1 .text .text1 {
+    margin-bottom: 15px;
+}
+.cont04 .inner .list .box1 .text .text1 strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+}
+.cont04 .inner .list .box1 .text .text2 {
+    margin-bottom: 50px;
+    line-height: 1.5;
+}
+.cont04 .inner .list .box1 .text .text2 p {
+    font-size: 15px;
+    font-weight: 300;
+}
+.cont04 .inner .list .box1 .text .text3 {
+    width: 300px;
+    word-break: break-all;
+    line-height: 1.5;
+}
+.cont04 .inner .list .box1 .text .text3 p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.cont04 .inner .list .box2 {
+    width: 480px;
+    text-align: right;
+}
+.cont04 .inner .list .box2 strong {
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+}
+.cont04 .inner .list .box2 .flex_wrap {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 60px;
+}
+.cont04 .inner .list .box2 .text4 .flex_wrap {
+    margin-bottom: 0;
+}
+.cont04 .inner .list .box2 .flex_wrap .text1_1 {
+    margin-right: 10px;
+}
+.cont04 .inner .list .box2 p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+.cont04 .inner .list .box2 .text1 {
+
+}
+
+.cont04 .inner .list .box3 {
+    width: 480px;
+    text-align: right;
+}
+.cont04 .inner .list .box3 strong {
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+}
+.cont04 .inner .list .box3 .flex_wrap {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 60px;
+}
+.cont04 .inner .list .box3 .flex_wrap .text1_1 {
+    margin-right: 10px;
+}
+.cont04 .inner .list .box3 p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+.cont04 .inner .list .box3 .text2, .cont04 .inner .list .box3 .text3 {
+    margin-bottom: 60px;
 }
 
 
