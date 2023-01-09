@@ -57,7 +57,7 @@ header .inner {
     margin: 0 auto;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     color: #333;
 }
@@ -73,36 +73,31 @@ header .inner nav ul {
 }
 header .inner nav ul li {
     padding-left: 40px;
-}
-header .inner nav ul li a {
     font-family: 'Poppins';
 }
-header .inner nav ul li a:hover {
+/* header .inner nav ul li a {
+    font-family: 'Poppins';
+} */
+/* header .inner nav ul li a:hover {
     color: rgba(51, 51, 51, 0.8);
-}
+} */
 
 
 /* .main_visual */
 .main_visual {
     height: 100vh;
     position: relative;
-    background-color: #eee;
 }
 .main_visual .img {
     width: 100%;
     height: 100%;
 }
-.main_visual .inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255, 255, 255, 0.8);
+.main_visual .img img {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
-.main_visual .inner p {
-    color: #333;
-    font-size: 20px;
-}
+
 
 
 /* .cont01 */
@@ -199,12 +194,12 @@ header .inner nav ul li a:hover {
     font-weight: 300;
 }
 
-.cont01 .inner .mySwiper .swiper-wrapper .swiper-slide .item .info .flex_wrap .bar {
+/* .cont01 .inner .mySwiper .swiper-wrapper .swiper-slide .item .info .flex_wrap .bar {
     width: 18px;
     height: 2px;
     background-color: #333;
     margin-bottom: 15px;
-}
+} */
 .cont01 .inner .mySwiper .swiper-wrapper .swiper-slide .item .info .flex_wrap > div {
     margin-bottom: 30px;
 }
@@ -223,7 +218,12 @@ header .inner nav ul li a:hover {
     color: #444;
     line-height: 1.4;
 }
-
+.cont01 .inner .mySwiper .swiper-wrapper .swiper-slide .item .info .flex_wrap > div .text22 {
+    font-size: 12px;
+    font-weight: 300;
+    color: #555;
+    margin-top: 15px;
+}
 .cont01 .inner .mySwiper .swiper-wrapper .swiper-slide .item .pc_youtube {
     width: 60%;
     position: relative;
@@ -432,18 +432,40 @@ header .inner nav ul li a:hover {
 .cont03 .list {
     display: flex;
     justify-content: space-between;
-    margin-top: 200px;
     align-items: flex-end;
+    height: 710px;
+    margin-top: 37px;
 }
-.cont03 .list a {
-    width: 270px;
+.cont03 .list > a:nth-of-type(1) img {
+    width: 710px;
+    display: block;
+    object-fit: cover;
+    border: 1px solid #333;
 }
-.cont03 .list a img {
+.cont03 .list .box {
+    width: 710px;
+    height: 710px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.cont03 .list .box a img {
+    width: 345px;
+    height: 345px;
+    display: block;
+    object-fit: cover;
+    border: 1px solid #333;
+}
+.cont03 .list .box a:nth-of-type(4) img {
+    background-color: #eee;
+}
+/* .cont03 .list a img {
     width: 100%;
     height: 270px;
     object-fit: cover;
     display: block;
-}
+} */
 .cont03 .list a .info {
     background-color: #fff;
     padding: 20px 10px;
@@ -471,6 +493,7 @@ header .inner nav ul li a:hover {
 .cont04 .inner .title {
     width: 100%;
     height: 80px;
+    position: relative;
 }
 .cont04 .inner .title .title_flex {
     display: flex;
@@ -485,12 +508,25 @@ header .inner nav ul li a:hover {
     font-family: 'Poppins';
     font-weight: 300;
 }
+.cont04 .inner .list .resume_download {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    font-size: 14px;
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+.cont04 .inner .list .resume_download:hover {
+    font-weight: 500;
+}
 .cont04 .inner .list {
     width: 100%;
     height: calc(100% - 80px);
     display: flex;
     align-items: flex-end;
+    position: relative;
 }
+
 .cont04 .inner .list .box1 {
     width: 480px;
     height: 100%;
@@ -571,7 +607,9 @@ header .inner nav ul li a:hover {
 .cont04 .inner .list .box3 {
     width: 480px;
     text-align: right;
+    position: relative;
 }
+
 .cont04 .inner .list .box3 strong {
     font-size: 16px;
     font-weight: 500;
@@ -621,6 +659,7 @@ header .inner nav ul li a:hover {
 #footer p {
     margin-bottom: 10px;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.6);
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.4;
 }
