@@ -145,7 +145,7 @@ header .inner nav ul li {
     font-weight: 500;
     cursor: pointer;
     margin-left: 20px;
-    color: rgba(51, 51, 51, 0.4);
+    color: rgba(51, 51, 51, 0.7);
 }
 .cont01 .inner .title .tab_menu ul li.on {
     color: #333;
@@ -309,7 +309,7 @@ header .inner nav ul li {
     font-weight: 500;
     cursor: pointer;
     margin-left: 20px;
-    color: rgba(51, 51, 51, 0.4);
+    color: rgba(51, 51, 51, 0.7);
 }
 .cont02 .inner .title .tab_menu ul li.on {
     color: #333;
